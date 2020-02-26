@@ -1,0 +1,37 @@
+<style>
+    .bloodclot {
+	background: #000;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	line-height: 200px;
+	text-align: center;
+	position: fixed;
+	top: calc(50vh - 100px);
+	left: calc(50vw - 100px);
+	font-family: "Courier New", Monospace;
+	font-size: 17px;
+	color: #fff;
+}
+</style>   
+
+<script>
+    window.addEventListener("mousemove", function(event){
+			document.getElementsByClassName("bloodclot")[0].style.top = (event.clientY - 100) + "px";
+			document.getElementsByClassName("bloodclot")[0].style.left = (event.clientX - 100)+ "px";
+});
+</script>
+    
+    
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+<html>
+<body>
+    
+<div class="bloodclot" onmouseover="myFunction()">
+	PulmonaryArchery
+</div>
+    
+</body>
+</html>
