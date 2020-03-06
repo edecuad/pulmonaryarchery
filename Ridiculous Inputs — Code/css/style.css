@@ -1,0 +1,55 @@
+body {
+	background-color:#111c24;
+	background: linear-gradient(to bottom,#024e43 0,#111c24 40%);
+	font-family:'helvetica', 'sans';
+	padding-left:17vw;
+	padding-right:17vw;
+	margin-top: 0px; 
+	padding-top: 0px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+h1 {
+	font-size:70px;
+	text-decoration: underline;
+	line-height:40px;
+	letter-spacing: 2px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 26px;
+	letter-spacing: -1px;
+	line-height: 32px;
+	color: #80e0d3;
+}
+
+h3 {
+	font-size:17px;
+	line-height: 15px;
+	letter-spacing: 0px;
+	color: #fff;
+}
+
+#text {
+	color:#ff0000;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+#text_larger {
+	font-size:40px;
+}
+
+#burrito {
+      background-image: url(https://66.media.tumblr.com/08622cdc5560390aaa441b156a0bbcb3/tumblr_ms9d30Vz7n1sf8vm5o1_500.gif);
+      background-repeat: no-repeat;
+      background-position: center top;
+			background-size: auto 120%;
+      padding-top:40px;
+	padding-bottom:40px;
+      margin-bottom:0px;
+}
