@@ -1,37 +1,630 @@
-<style>
-    .bloodclot {
-	background: #000;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	line-height: 200px;
-	text-align: center;
-	position: fixed;
-	top: calc(50vh - 100px);
-	left: calc(50vw - 100px);
-	font-family: "Courier New", Monospace;
-	font-size: 17px;
-	color: #fff;
-}
-</style>   
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
 
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="=Introducing RoboFont 4.0. The Mobile UFO Editor You Waited For Just Got Better." />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="images/favicon.ico" />
+	<link href="https://fonts.googleapis.com/css2?family=Manuale&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+	<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://kit.fontawesome.com/7ce1e60bfb.js" crossorigin="anonymous"></script>
+	<title>RoboFont 4.0 &verbar; The Mobile UFO Editor You Waited For Just Got Better.</title>
+</head>
+<body>
+	<!-- Home -------------------->
+	<section class="home">
+		<div class="menu"> <span class="logo"><a href="#">RoboFont</a></span>
+			<a href="#about" class="js-anchor-link">About</a>
+			<a href="#features" class="js-anchor-link">Features</a>
+			<a href="#extensions" class="js-anchor-link">Extensions</a>
+			<a href="#download" class="js-anchor-link">Download</a>
+			<a href="#support" class="js-anchor-link">Support</a>
+		</div>
+		<div class="frame">
+			<div class="col" class="banner-img">
+
+			</div>
+		</div>
+	</section>
+	<!-- About -------------------->
+	<section id="about" class="about">
+		<div class="row">
+			<div class="col">
+				<h3 class="white">RoboFont 4.0</h3>
+				<h4 id="white">The Mobile UFO Editor You Waited For Just Got&nbsp;Better.</h4>
+			</div>
+			<div class="col">
+				<p>Written from scratch in Python with scalability in mind. A fully featured font editor with all the tools required for drawing&nbsp;typefaces.</p>
+			</div>
+			<div class="col">
+				<p>Provides full scripting access to objects and interface. A platform for building your own tools and extensions, and much&nbsp;more…!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="embed-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/za8ERlMchUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Features -------------------->
+	<section id="features" class="features">
+		<div class="row">
+			<div class="col">
+				<h2>Full Python Support</h2>
+			</div>
+		</div>
+		<!-- 1 -------------------->
+		<div class="row">
+			<div class="col-4">
+				<h3>Interpolating two RGB colors.</h3>
+				<p>
+					<img src="images/interpolate-colors.png" width="100%">
+				</p>
+			</div>
+			<div class="col-8"> <pre>size(<span class="red">1000</span>,<span class="red">500</span>)
+
+<span class="grey"># define two rgb colors</span>
+color1 <span class="yellow">=</span> <span class="red">0.5</span>, <span class="red">0.0</span>, <span class="red">0.3</span>
+color2 <span class="yellow">=</span> <span class="red">1.0</span>, <span class="red">0.6</span>, <span class="red">0.1</span>
+
+<span class="grey"># total number of steps</span>
+steps <span class="yellow">=</span> <span class="red">12</span>
+
+<span class="grey"># initial position</span>
+x, y <span class="yellow">=</span> <span class="red">0</span>, <span class="red">0</span>
+
+<span class="grey"># calculate size for steps</span>
+w <span class="yellow">=</span> width() / steps
+h <span class="yellow">=</span> height()
+
+<span class="grey"># iterate over the total amount of steps</span>
+<span class="blue">for</span> i <span class="yellow">in</span> range(steps):
+
+    <span class="grey"># calculate interpolation factor for this step</span>
+    factor <span class="yellow">=</span> i <span class="yellow">*</span> <span class="red">1.0</span> <span class="yellow">/</span> (steps - <span class="red">1</span>)
+
+    <span class="grey"># interpolate each rgb channel separately</span>
+    r <span class="yellow">=</span> color1[<span class="red">0</span>] <span class="yellow">+</span> factor <span class="yellow">*</span> (color2[<span class="red">0</span>] <span class="yellow">-</span> color1[<span class="red">0</span>])
+    g <span class="yellow">=</span> color1[<span class="red">1</span>] <span class="yellow">+</span> factor <span class="yellow">*</span> (color2[<span class="red">1</span>] <span class="yellow">-</span> color1[<span class="red">1</span>])
+    b <span class="yellow">=</span> color1[<span class="red">2</span>] <span class="yellow">+</span> factor <span class="yellow">*</span> (color2[<span class="red">2</span>] <span class="yellow">-</span> color1[<span class="red">2</span>])
+
+    <span class="grey"># draw a rectangle with the interpolated color</span>
+    fill(r, g, b)
+    stroke(r, g, b)
+    rect(x, y, w, h)
+
+    <span class="grey"># increase x-position for the next step</span>
+    x <span class="yellow">+=</span> w</pre>
+			</div>
+		</div>
+		<!-- 2 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Interpolate position and size.</h3>
+				<p>
+					<img src="images/interpolate-pos-size.png" width="100%">
+				</p>
+			</div>
+			<div class="col-8"> <pre><span class="grey"># define position and size for two rectangles</span>
+x1, y1 <span class="yellow">=</span> <span class="red">98</span>, <span class="red">88</span>
+w1, h1 <span class="yellow">=</span> <span class="red">480</span>, <span class="red">492</span>
+
+x2, y2 <span class="yellow">=</span> <span class="red">912</span>, <span class="red">794</span>
+w2, h2 <span class="yellow">=</span> <span class="red">20</span> <span class="red">126</span>
+
+<span class="grey"># total amount of steps</span>
+steps <span class="yellow">=</span> <span class="red">22</span>
+
+<span class="grey"># define blend mode and color</span>
+blendMode(<span class="pink">'multiply'</span>)
+fill(<span class="red">0</span>, <span class="red">0.3</span>, <span class="red">1</span>, <span class="red">0.2</span>)
+
+<span class="grey"># iterate over the total amount of steps</span>
+<span class="blue">for</span> i <span class="yellow">in</span> <span class="green">range</span>(steps):
+
+    <span class="grey"># calculate interpolation factor for this step</span>
+    factor <span class="yellow">=</span> i <span class="yellow">*</span> <span class="red">1.0</span> / (steps <span class="yellow">-</span> <span class="red">1</span>)
+
+    <span class="grey"># interpolate each rectangle attribute separately</span>
+    x = x1 <span class="yellow">+</span> factor <span class="yellow">*</span> (x2 <span class="yellow">-</span> x1)
+    y = y1 <span class="yellow">+</span> factor <span class="yellow">*</span> (y2 <span class="yellow">-</span> y1)
+    w = w1 <span class="yellow">+</span> factor <span class="yellow">*</span> (w2 <span class="yellow">-</span> w1)
+    h = h1 <span class="yellow">+</span> factor <span class="yellow">*</span> (h2 <span class="yellow">-</span> h1)
+
+    <span class="grey"># draw a rectangle with the calculated variables</span>
+    rect(x, y, w, h)</pre>
+			</div>
+		</div>
+		<!-- 3 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Checking interpolation compatibility.</h3>
+				<p>Before interpolating two glyphs, we need to make sure that they are compatible. We can do that with code using a glyph’s <span class="pre_inline">isCompatible</span> method. This function returns two&nbsp;values:</p>
+				<ul>
+					<li>The first is a boolean indicating if the two glyphs are&nbsp;compatible.</li>
+					<li>If the first value is <span class="pre_inline">False</span>, the second will contain a report of the&nbsp;problems.</li>
+				</ul>
+			</div>
+			<div class="col-8"> <pre>f <span class="yellow">=</span> CurrentFont()
+g <span class="yellow">=</span> f[<span class="pink">'O'</span>]
+<span class="blue">(True, '')</span>(g.isCompatible(f[<span class="pink">'o'</span>]))</pre>
+				<pre><span class="blue">(True, '')</span></pre>
+				<pre><span class="blue">print</span>(g.isCompatible(f['n']))</pre>
+				<pre><span class="blue">((False, '[Fatal] Contour 0 contains a different number of segments.\n[Fatal] Contour 1 contains a different number of segments.\n[Warning] The glyphs do not contain components with exactly the same base glyphs.')</span></pre>
+			</div>
+		</div>
+		<!-- 4 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Interpolating glyphs in the same font.</h3>
+				<p>Generate a number of interpolation and extrapolation steps between two selected glyphs in the current&nbsp;font.</p>
+				<p>
+					<img src="images/interpolate-in-font.png" width="100%">
+				</p>
+			</div>
+			<div class="col-8"> <pre><span class="grey"># settings</span>
+interpolationSteps <span class="yellow">=</span> <span class="red">5</span>
+extrapolateSteps <span class="yellow">=</span> <span class="red">2</span>
+
+<span class="grey"># get the currentFont</span>
+f <span class="yellow">=</span> CurrentFont()
+
+<span class="blue">if</span> f <span class="yellow">is</span> <span class="orange">None</span>:
+    <span class="grey"># no font open</span>
+    print(<span class="pink">"Oops! There is not font open."</span>)
+
+<span class="blue">else</span>:
+    <span class="grey"># get the selection</span>
+    selection <span class="yellow">=</span> f.selectedGlyphNames
+
+    <span class="grey"># check if the selection contains only two glyphs</span>
+    <span class="blue">if</span> <span class="green">len</span>(selection) <span class="yellow">!=</span> <span class="red">2</span>:
+        <span class="blue">print</span>(<span class="pink">"Incompatible selection: two compatible glyphs are required."</span>)
+
+    <span class="blue">else</span>:
+        <span class="grey"># get the master glyphs</span>
+        source1 <span class="yellow">=</span> f[selection[<span class="red">0</span>]]
+        source2 <span class="yellow">=</span> f[selection[<span class="red">1</span>]]
+
+        <span class="grey"># check if they are compatible</span>
+        <span class="blue">if</span> <span class="yellow">not</span> source1.isCompatible(source2)[<span class="red">0</span>]:
+            <span class="grey"># the glyphs are not compatible</span>
+            <span class="blue">print</span>(<span class="pink">"Incompatible masters: Glyph %s and %s are not compatible."</span> <span class="yellow">%</span> (source1<span class="yellow">.</span>name, source2<span class="yellow">.</span>name))
+
+        <span class="blue">else</span>:
+            <span class="grey"># loop over the amount of required interpolations</span>
+            nameSteps <span class="yellow">=</span> <span class="red">0</span>
+            <span class="blue">for</span> i <span class="yellow">in</span> <span class="green">range</span>(-extrapolateSteps, interpolationSteps <span class="yellow">+</span> extrapolateSteps <span class="yellow">+</span> <span class="red">1</span>, <span class="red">1</span>):
+                <span class="grey"># create a new name</span>
+                name <span class="yellow">=</span> <span class="pink">"interpolation.%03i"</span> <span class="yellow">%</span> nameSteps
+                nameSteps <span class="yellow">+=</span> <span class="red">1</span>
+                <span class="grey"># create the glyph if does not exist</span>
+                dest <span class="yellow">=</span> f.newGlyph(name)
+                <span class="grey"># get the interpolation factor (a value between 0.0 and 1.0)</span>
+                factor <span class="yellow">=</span> i <span class="yellow">/</span> <span class="green">float</span>(interpolationSteps)
+                <span class="grey"># interpolate between the two masters with the factor</span>
+                dest.interpolate(factor, source1, source2)
+
+            <span class="grey"># done!</span>
+            f.changed()</pre>
+			</div>
+		</div>
+		<!-- 6 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Interpolating between two masters.</h3>
+				<p>Interpolate glyphs from two master fonts into a third font. The script expects 3 fonts&nbsp;open:</p>
+				<ul>
+					<li>the current font, where the glyphs will be&nbsp;interpolated.</li>
+					<li>one master font named&nbsp;“Regular”.</li>
+					<li>another master font named&nbsp;“Bold”.</li>
+				</ul>
+			</div>
+			<div class="col-8"> <pre><span class="grey"># the font where the interpolated glyphs will be stored</span>
+f <span class="yellow">=</span> CurrentFont()
+
+<span class="grey"># the two master fonts</span>
+f1 <span class="yellow">=</span> AllFonts().getFontsByStyleName(<span class="pink">'Regular'</span>)[<span class="red">0</span>]
+f2 <span class="yellow">=</span> AllFonts().getFontsByStyleName(<span class="pink">'Bold'</span>)[<span class="red">0</span>]
+
+<span class="grey"># the interpolation factor</span>
+factor <span class="yellow">=</span> <span class="red">0.4</span>
+
+<span class="grey"># a list of glyph names to be interpolated</span>
+glyphNames <span class="yellow">=</span> [<span class="pink">'A'</span>, <span class="pink">'B'</span>, <span class="pink">'C'</span>, <span class="pink">'a'</span>, <span class="pink">'b'</span>, <span class="pink">'c'</span>]
+
+<span class="grey"># iterate over the glyph names</span>
+<span class="blue">for</span> glyphName <span class="yellow">in</span> glyphNames:
+
+    <span class="grey"># if this glyph is not available in one of the masters, skip it</span>
+    <span class="blue">if</span> <span class="yellow">not</span> glyphName <span class="yellow">in</span> f1:
+        <span class="blue">print</span>(<span class="pink">'%s not in %s, skipping…'</span>, (glyphName, f1))
+        <span class="blue">continue</span>
+    <span class="blue">if</span> <span class="yellow">not</span> glyphName <span class="yellow">in</span> f2:
+        <span class="blue">print</span>(<span class="pink">'%s not in %s, skipping…'</span> <span class="yellow">%</span> (glyphName, f1))
+        <span class="blue">continue</span>
+
+    <span class="grey"># if the glyph does not exist in the destination font, create it</span>
+    <span class="blue">if</span> <span class="yellow">not</span> glyphName <span class="yellow">in</span> f:
+        f<span class="yellow">.</span>newGlyph(glyphName)
+
+    <span class="grey"># interpolate glyph</span>
+    <span class="blue">print</span>(<span class="pink">'interpolating %s…'</span> <span class="yellow">%</span> glyphName)
+    f[glyphName]<span class="yellow">.</span>interpolate(factor, f1[glyphName], f2[glyphName])</pre>
+			</div>
+		</div>
+		<!-- 3 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Interpolating fonts.</h3>
+				<p>Generate a new font by interpolating two master&nbsp;fonts.</p>
+			</div>
+			<div class="col-8"> <pre><span class="grey"># get fonts</span>
+font1 <span class="yellow">=</span> OpenFont()
+font2 <span class="yellow">=</span> OpenFont()
+
+<span class="grey"># define interpolation factor</span>
+factor <span class="yellow">=</span> <span class="red">0.5</span>
+
+<span class="grey"># make destination font</span>
+font3 <span class="yellow">=</span> NewFont()
+
+<span class="grey"># this interpolates the glyphs</span>
+font3<span class="yellow">.</span>interpolate(factor, font1, font2)
+
+<span class="grey"># this interpolates the kerning</span>
+<span class="grey"># comment this line out of you're just testing</span>
+font3<span class="yellow">.</span>kerning<span class="yellow">.</span>interpolate(font1<span class="yellow">.</span>kerning, font2<span class="yellow">.</span>kerning, factor)
+
+<span class="grey"># done!</span>
+font3<span class="yellow">.</span>changed()</pre>
+			</div>
+		</div>
+		<!-- 5 -------------------->
+		<div class="space100"></div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Condensomatic.</h3>
+				<p>Generate condensed glyphs from a Regular and a Bold. Calculates a scaling factor from the Regular and Bold stem widths. Uses interpolation and horizontal scaling to create condensed&nbsp;glyphs.</p>
+				<p>
+					<img src="images/condensomatic.png" width="100%">
+				</p>
+			</div>
+			<div class="col-8"> <pre><span class="grey"># get Condensed, Regular and Bold fonts</span>
+condensedFont <span class="yellow">=</span> CurrentFont()
+regularFont <span class="yellow">=</span> AllFonts()<span class="yellow">.</span>getFontsByStyleName(<span class="pink">'Roman'</span>)[<span class="red">0</span>]
+boldFont <span class="yellow">=</span> AllFonts()<span class="yellow">.</span>getFontsByStyleName(<span class="pink">'Bold'</span>)[<span class="red">0</span>]
+
+<span class="grey"># measure the Regular and Bold stem widths</span>
+regularStem <span class="yellow">=</span> <span class="red">95</span>
+boldStem <span class="yellow">=</span> <span class="red">140</span>
+
+<span class="grey"># condensing factor</span>
+condenseFactor <span class="yellow">=</span> <span class="red">0.85</span>
+
+<span class="grey"># calculate scale factor from stem widths</span>
+xFactor <span class="yellow">=</span> <span class="green">float</span>(regularStem) <span class="yellow">/</span> (regularStem <span class="yellow">+</span> condenseFactor <span class="yellow">*</span> (boldStem <span class="yellow">-</span> regularStem))
+
+<span class="grey"># interpolate selected glyphs</span>
+<span class="blue">for</span> glyphName <span class="yellow">in</span> condensedFont<span class="yellow">.</span>templateSelectedGlyphNames:
+
+    <span class="grey"># get Condensed, Regular and Bold glyphs</span>
+    condensedGlyph <span class="yellow">=</span> condensedFont<span class="yellow">.</span>newGlyph(glyphName, clear<span class="yellow">=</span><span class="orange">True</span>)
+    regularGlyph <span class="yellow">=</span> regularFont[glyphName]
+    boldGlyph <span class="yellow">=</span> boldFont[glyphName]
+
+    <span class="grey"># interpolate Regular and Bold</span>
+    condensedGlyph<span class="yellow">.</span>clear()
+    condensedGlyph<span class="yellow">.</span>interpolate((condenseFactor, <span class="red">0</span>), regularGlyph, boldGlyph)
+
+    <span class="grey"># scale glyph horizontally</span>
+    condensedGlyph<span class="yellow">.</span>scaleBy((xFactor, <span class="red">1</span>))
+
+    <span class="grey"># calculate glyph margins</span>
+    condensedGlyph<span class="yellow">.</span>leftMargin <span class="yellow">=</span> (regularGlyph<span class="yellow">.</span>leftMargin <span class="yellow">+</span> boldGlyph<span class="yellow">.</span>leftMargin) <span class="yellow">*</span> <span class="red">0.5</span> <span class="yellow">*</span> (<span class="red">1.0</span> <span class="yellow">-</span> condenseFactor)
+    condensedGlyph<span class="yellow">.</span>rightMargin <span class="yellow">=</span> (regularGlyph<span class="yellow">.</span>rightMargin <span class="yellow">+</span> boldGlyph<span class="yellow">.</span>rightMargin) <span class="yellow">*</span> <span class="red">0.5</span> <span class="yellow">*</span> (<span class="red">1.0</span> <span class="yellow">-</span> condenseFactor)
+
+    <span class="grey"># done!</span>
+    condensedGlyph<span class="yellow">.</span>changed()</pre>
+			</div>
+		</div>
+	</section>
+    
+    
+    
+    
+    
+	<!-- Extensions -------------------->
+	<section id="extensions" class="extensions">
+		<div class="row">
+			<hr class="divider">
+			<div class="col">
+				<h2>Extensions</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h3>Commercial Extensions</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_findreplace@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>Find &amp; Replace</h4>
+				<p id="description-ext">Search parts of contours and replace them with a given&nbsp;replacement.</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_metricsmachine@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>MetricsMachine</h4>
+				<p id="description-ext">MetricsMachine is a kerning editor. It’s really good at making the kerning process suck less. It doesn’t do autokerning. It’s just a (much) fast(er) way of&nbsp;kerning.</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_prepolator@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>Prepolator</h4>
+				<p id="description-ext">Prepping fonts for&nbsp;interpolation.</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_skate@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>Skateboard</h4>
+				<p id="description-ext">Shows an overview of all the important data: which UFOs and layers are part of the interpolation system, which designspace locations are relevant and a location for the current&nbsp;preview.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3"> <span class="button_ext">Purchase now &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Purchase now &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Purchase now &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Purchase now &nbsp;▶</span>
+			</div>
+		</div>
+		<div class="space70"></div>
+		<div class="row">
+			<div class="col">
+				<h3>Open-Source Extensions</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_eye@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>Eyeliner</h4>
+				<p id="description-ext">RoboFont extension that highlights points that are aligned with vertical metrics, guides, or blue zones (if set to be&nbsp;visible).</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_ani_glyphgiffer@x2.gif" class="ext_logo">
+					</a>
+				</div>
+				<h4>GlyphGiffer</h4>
+				<p id="description-ext">GlyphGiffer lets you export glyphs from a folder of .ufo files as an animated&nbsp;gif.</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_wordomat@2x.jpg" class="ext_logo">
+					</a>
+				</div>
+				<h4>Word-o-mat v3.0</h4>
+				<p id="description-ext">Extension for RoboFont that generates words for use in type sketching, spacing, testing,&nbsp;etc.</p>
+			</div>
+			<div class="col-3">
+				<div class="pic">
+					<a href="#">
+						<img src="images/extensions_thumb_ani_interpolationslider@2x.gif" class="ext_logo">
+					</a>
+				</div>
+				<h4>Interpolation Slider</h4>
+				<p id="description-ext">The extension is designed to give a simple interface to preview how the points move during an interpolation of two&nbsp;masters.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3"> <span class="button_ext">Explore Extensions &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Explore Extensions &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Explore Extensions &nbsp;▶</span>
+			</div>
+			<div class="col-3"> <span class="button_ext">Explore Extensions &nbsp;▶</span>
+			</div>
+		</div>
+	</section>
+    
+    
+    
+    
+    
+	<!-- Download -------------------->
+	<section class="download">
+		<div class="row">
+			<div class="col">
+				<hr class="divider">
+				<h2>Get RoboFont</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<div class="pic">
+					<a href="#">
+						<img src="images/try_banners_buy.jpg" class="ext_logo">
+					</a>
+					<h4 class="spaceee">30-day Trial</h4>
+					<p>Want to test drive? Try the fully functional RoboFont trial for 30&nbsp;days.</p>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="get_block">
+					<a href="#">
+						<img src="images/try_banners_trial.jpg" class="ext_logo">
+					</a>
+					<h4 class="spaceee">Buy RoboFont 4.0</h4>
+					<p>Get a RoboFont license. MacOS 10.9 or later required. Volume licenses&nbsp;available.</p>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="get_block">
+					<a href="#">
+						<img src="images/try_banners_student.jpg" class="ext_logo">
+					</a>
+					<h4 class="spaceee">Educational License</h4>
+					<p>Post-secondary students get licenses at a discounted&nbsp;price.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4"> <span class="button_ext">Try Now &nbsp;▶</span>
+			</div>
+			<div class="col-4"> <span class="button_ext">Download &nbsp;▶</span>
+			</div>
+			<div class="col-4"> <span class="button_ext">Get Discount &nbsp;▶</span>
+			</div>
+		</div>
+	</section>
+    
+    
+    
+    
+    
+	<!-- Support -------------------->
+	<section id="support" class="support">
+		<div class="row">
+			<div class="col">
+				<h2>Support</h2>
+				<ul>
+					<li><a href="#">Forum ▶</a>
+					</li>
+					<li><a href="#">Building Tools ▶</a>
+					</li>
+					<li><a href="#">Announcements ▶</a>
+					</li>
+					<li><a href="#">Contact Us ▶</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -------------------->
+	<div class="footer">
+		<div class="row">
+			<div class="col-2"><span class="logo"><a href="#">&nbsp;</a></span>
+			</div>
+			<div class="col-2"></div>
+			<div class="col-2"><strong>The Mobile UFO Editor You Waited For Just Got&nbsp;Better.</strong>
+			</div>
+			<div class="col-2"> <strong>Menu:</strong>
+				<ul>
+					<li><a href="#">About</a>
+					</li>
+					<li><a href="#">Features</a>
+					</li>
+					<li><a href="#">Extensions</a>
+					</li>
+					<li><a href="#">Download</a>
+					</li>
+					<li><a href="#">Support</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-2"> <strong>Contributors:</strong>
+				<ul>
+					<li><a href="#">Font Bureau <i class="fas fa-external-link-alt"></i></a>
+					</li>
+					<li><a href="#">Petr van Blokland <i class="fas fa-external-link-alt"></i></a>
+					</li>
+					<li><a href="#">TypeMyType <i class="fas fa-external-link-alt"></i></a>
+					</li>
+					<li><a href="#">Ed Valenzuela</a>
+					</li>
+					<li><a href="#">Quinn Keaveney</a>
+					</li>
+					<li><a href="#">Emily Carr University of Art + Design <i class="fas fa-external-link-alt"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-2"> <strong>Thanks to:</strong>
+				<ul>
+					<li><a href="#">Ben Kiel</a>
+					</li>
+					<li><a href="#">Gustavo Ferreira</a>
+					</li>
+					<li><a href="#">LettError</a>
+					</li>
+					<li><a href="#">Type Supply</a>
+					</li>
+					<li><a href="#">Unified Font Object</a>
+					</li>
+					<li><a href="#">FontParts</a>
+					</li>
+					<li><a href="#">FontTools</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer2">
+		<div class="row">
+			<div class="col">&#169; Copyright 2020 TypeMyType</div>
+			<div class="col">
+				<ul id="horizontal-list">
+					<li class="fb"><a href="#">Facebook</a>
+					</li>
+					<li class="tw"><a href="#">Twitter</a>
+					</li>
+					<li class="in"><a href="#">Instagram</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
 <script>
-    window.addEventListener("mousemove", function(event){
-			document.getElementsByClassName("bloodclot")[0].style.top = (event.clientY - 100) + "px";
-			document.getElementsByClassName("bloodclot")[0].style.left = (event.clientX - 100)+ "px";
-});
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	    anchor.addEventListener('click', function (e) {
+	        e.preventDefault();
+	        document.querySelector(this.getAttribute('href')).scrollIntoView({
+	            behavior: 'smooth'
+	        });
+	    });
+	});
+       
 </script>
     
     
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-
-<html>
-<body>
-    
-<div class="bloodclot" onmouseover="myFunction()">
-	PulmonaryArchery
-</div>
-    
-</body>
 </html>
